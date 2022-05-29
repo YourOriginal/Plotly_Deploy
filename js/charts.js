@@ -53,7 +53,6 @@ function buildMetadata(sample) {
   });
 }
 
-// Deliverable 1.
 
 // 1. Create the buildCharts function.
 function buildCharts(sample) {
@@ -86,7 +85,7 @@ function buildCharts(sample) {
     console.log(otu_labels)
     console.log(sample_values)
 
-    // 3.3. Create a variable that holds the washing frequency.
+    // Create a variable that holds the washing frequency.
     var wfreq = parseFloat(result.wfreq)
     console.log(wfreq)
 
@@ -114,7 +113,6 @@ function buildCharts(sample) {
     Plotly.newPlot("bar", barData, barLayout);
 
 
-    // DELIVERABLE 2
     // 1. Create the trace for the bubble chart.
     var bubbleData = [{
       x: otu_ids,
@@ -124,7 +122,7 @@ function buildCharts(sample) {
       marker: {
         size: sample_values,
         color: otu_ids,
-        colorscale: "Blues"
+        colorscale: "magma"
       }
     }];
 
@@ -134,13 +132,12 @@ function buildCharts(sample) {
       xaxis: {
         title: "OTU ID"
       },
-      // hovermode = otu_labels
+
     };
 
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
-    // DELERABLE 3 
     // 4. Create the trace for the gauge chart.
     var gaugeData = [{
       domain: {
@@ -160,23 +157,23 @@ function buildCharts(sample) {
         },
         steps: [{
             range: [0, 2],
-            color: "red"
+            color: "black"
           },
           {
             range: [2, 4],
-            color: "orange"
+            color: "dimgrey"
           },
           {
             range: [4, 6],
-            color: "yellow"
+            color: "darkgray"
           },
           {
             range: [6, 8],
-            color: "lime"
+            color: "lightgray"
           },
           {
             range: [8, 10],
-            color: "green"
+            color: "whitesmoke"
           },
         ]
 
